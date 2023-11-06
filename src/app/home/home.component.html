@@ -1,0 +1,281 @@
+<header>
+    <div class="polenta-logo-box">
+        <a href="">
+            <img src="./assets/diseño/polenta-logo.png" alt="Logo Polenta" />
+        </a>
+    </div>
+    <div class="menu-box">
+        <button class="menu-button" (click)="openMenu()" style="border: none; background: none;">
+            <mat-icon style="color: #523cf2;">menu</mat-icon>
+        </button>
+        <div class="menu" #menu>
+            <div class="menu-header">
+                <div class="menu-logo-box">
+                    <a href="">
+                        <img src="./assets/diseño/hola-polenta-logo.png" alt="Logo Polenta" />
+                    </a>
+                </div>
+            </div>
+            <div class="menu-body">
+                <nav>
+                    <ol>
+                        <hr />
+                        <li>
+                            <a class="menu-list-item" href="#entradas" (click)="closeMenu()">Sacá tus Entradas</a>
+                        </li>
+                        <hr />
+                        <li>
+                            <a class="menu-list-item" href="#momentos-polenta" (click)="closeMenu()">Momentos
+                                Polenta</a>
+                        </li>
+                        <hr />
+                        <li>
+                            <a class="menu-list-item info" href="#info-polenta" (click)="closeMenu()">¿Que C#&% es la
+                                Polenta*?</a>
+                        </li>
+                        <hr />
+                        <li>
+                            <div class="menu-icons-box">
+                                <a class="menu-icons ig iconos" href="https://www.instagram.com/polenta.polenta"
+                                    target="_blank" rel="noopener external">
+                                    <img src="./assets/redes/instagram-logo.png" alt="Logo Instagram" loading="lazy" />
+                                </a>
+                                <a class="menu-icons yt iconos" href="https://www.youtube.com/@polenta.polenta"
+                                    target="_blank" rel="noopener external">
+                                    <img src="./assets/redes/youtube-logo.png" alt="Logo Youtube" loading="lazy" />
+                                </a>
+                                <a class="menu-icons spotify iconos" href="https://spotify.link/ffe57EUw9Ab"
+                                    target="_blank" rel="noopener external">
+                                    <img src="./assets/redes/spotify-logo.png" alt="Logo Spotify" loading="lazy" />
+                                </a>
+                            </div>
+                        </li>
+                        <hr />
+                    </ol>
+                </nav>
+                <div class="colapse-button-box">
+                    <button (click)="collapseMenu()"
+                        style="border: none; background: none; color: aliceblue; font-size: 40px;">
+                        <mat-icon>expand_less</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="buttons-box">
+        <button class="header-buttons" (click)="scrollToElement('entradas')">
+            Sacá tus Entradas
+        </button>
+        <button class="header-buttons" (click)="scrollToElement('momentos-polenta')">
+            Momentos Polenta
+        </button>
+        <button class="header-buttons" (click)="scrollToElement('info-polenta')">
+            Info
+        </button>
+        <a class="header-buttons iconos" href="https://www.instagram.com/polenta.polenta" target="_blank"
+            rel="noopener external">
+            <img src="./assets/redes/instagram-logo.png" alt="Logo Instagram" />
+        </a>
+        <a class="header-buttons iconos" href="https://spotify.link/ffe57EUw9Ab" target="_blank"
+            rel="noopener external">
+            <img src="./assets/redes/spotify-logo.png" alt="Logo Spotify" />
+        </a>
+    </nav>
+</header>
+<main>
+    <div class="background-box">
+        <video preload="auto" onloadedmetadata="this.muted=true" autoplay loop playsinline
+            src="./assets/back-video.mp4"></video>
+    </div>
+    <div class="main-container" #mainContainer>
+        <div class="hola-polenta-box">
+            <p>Hola, llegaste a</p>
+            <div class="estatua">
+                <img src="./assets/diseño/estatua.png" alt="Imagen estatua griega" />
+            </div>
+            <div class="polenta-main">
+                <img src="./assets/diseño/hola-polenta-logo.png" alt="Logo Polenta" />
+            </div>
+        </div>
+        <div class="entradas-container">
+            <div class="entradas-header" id="entradas">
+                <button class="header-buttons" (click)="scrollToElement('entradas')">
+                    <h1>SACÁ TUS ENTRADAS</h1>
+                </button>
+            </div>
+            <div class="carousel-container">
+                <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" (breakpoint)="breakpoint($event)"
+                    [config]="slideConfig">
+                    <div ngxSlickItem class="slide">
+                        <img src="./assets/entradas/caba-1011.png" alt="Ticket NEUQUEN 11/11" />
+                        <div class="text-box">
+                            <a href="https://www.passline.com/eventos/polenta-en-c" rel="noopener external"
+                                target="_blank">
+                                <div class="comprar">COMPRAR</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div ngxSlickItem class="slide">
+                        <img src="./assets/entradas/neuquen-1111.png" alt="Ticket CABA 10/11" />
+                        <div class="text-box">
+                            <a href="https://fivepro.tuentrada.com/selection/event/date?productId=10228952755761"
+                                rel="noopener external" target="_blank">
+                                <div class="comprar">COMPRAR</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div ngxSlickItem class="slide">
+                        <img src="./assets/entradas/bsas-2411.png" alt="Ticket BUENOS AIRES 24/11" />
+                        <div class="text-box">
+                            <a href="https://www.passline.com/eventos/polenta-electronica-215567"
+                                rel="noopener external" target="_blank">
+                                <div class="comprar">COMPRAR</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div ngxSlickItem class="slide">
+                        <img src="./assets/entradas/temperley-2411.png" alt="Ticket TEMPERLEY 24/11" />
+                        <div class="text-box">
+                            <a href="https://livepass.com.ar/events/polenta-en-temperley-24-11" rel="noopener external"
+                                target="_blank">
+                                <div class="comprar">COMPRAR</div>
+                            </a>
+                        </div>
+                    </div>
+                </ngx-slick-carousel>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="puestas-container">
+    <div class="puestas-text">
+        <h1 id="puestas-header">PUESTAS</h1>
+        <p>La experiencia Polenta* comienza desde el momento en que entrás hasta el segundo en que te vas. Por eso la
+            puesta
+            de luces, pantallas y visuales en la fiesta es la gran protagonista. Para cada edición cambiamos como se
+            presenta la fiesta. Shows de lasers, pantallas gigantes, luces led y visuales originales reciben a la gente
+            al
+            mundo&nbsp;Polenta*.</p>
+    </div>
+    <div class="puestas-gallery">
+        <img class="imagen-puestas" [src]="puestas[currentImgIndex]" alt="Imágen Puestas Polenta*">
+    </div>
+    <div class="navigation-buttons">
+        <button (click)="showPreviousImage()" [disabled]="currentImgIndex === 0">
+            <span class="material-icons">chevron_left</span>
+        </button>
+        <button (click)="showNextImage()" [disabled]="currentImgIndex === puestas.length - 1">
+            <span class="material-icons">chevron_right</span>
+        </button>
+    </div>
+</div>
+<div class="momentos-background">
+    <button class="scroll-button" #scroll (click)="scrollToTop()"><mat-icon>arrow_upward</mat-icon></button>
+    <div class="momentos-container">
+        <h1 class="momentos-header" id="momentos-polenta">MOMENTOS POLENTA*</h1>
+        <div class="momentos-box">
+            <div class="momento crew">
+                <div class="img-box">
+                    <img src="./assets/momentos/dance-crew.png" alt="imagen momenot polenta" loading="lazy" />
+                </div>
+                <div class="m-text-box">
+                    <h2>POLENTA* DANCE CREW</h2>
+                    <p>
+                        La Polenta Dance Crew dice presente apoderándose de la fiesta con
+                        coreografías originales para cada&nbsp;edición.
+                    </p>
+                </div>
+            </div>
+            <div class="momento remeras">
+                <div class="img-box">
+                    <img src="./assets/momentos/lanza-remeras.png" alt="imagen momenot polenta" loading="lazy" />
+                </div>
+                <div class="m-text-box">
+                    <h2>LANZA-REMERAS</h2>
+                    <p>
+                        Suena "El Mal" de Ca7riel y el foco de la fiesta gira alrededor del
+                        lanza-remeras con merch exclusivo de Polenta* y&nbsp;CO2.
+                    </p>
+                </div>
+            </div>
+            <div class="momento churros">
+                <div class="img-box">
+                    <img src="./assets/momentos/churros.png" alt="imagen momenot polenta" loading="lazy" />
+                </div>
+                <div class="m-text-box">
+                    <h2>4:20 CHURROS</h2>
+                    <p>
+                        Hora de un bajón para llegar al final de la fiesta. Los churros con
+                        dulce de leche dicen presente a las 4:20, obvio con la canción de&nbsp;Emilia&nbsp;;)
+                    </p>
+                </div>
+            </div>
+            <div class="momento angeles">
+                <div class="img-box">
+                    <img src="./assets/momentos/angeles.png" alt="imagen momenot polenta" loading="lazy" />
+                </div>
+                <div class="m-text-box">
+                    <h2>ÁNGELES POLENTA*</h2>
+                    <p>
+                        La seguridad es importante. Nuestro equipo de "Ángeles" dan vueltas
+                        por la pista velando por la seguridad y bienestar de&nbsp;todxs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="info-background">
+    <div class="info-box">
+        <h1 class="info-header" id="info-polenta">¿QUÉ C$&%! ES LA POLENTA*?</h1>
+        <div class="corazon"><img src="./assets/diseño/corazon-alado.png" alt="Imágen corazon alado" loading="lazy" />
+        </div>
+        <p class="movil-p">
+            La Polenta* no es cualquier fiesta.
+            Es una fiesta para disfrutar, bailar y gozar, con las personas que quieras, con la ropa que quieras, sin
+            etiquetas.
+            La Polenta* es esa sensación que te queda cuando te vas y la manija que tenés antes de llegar.
+            La puesta de lasers, luces y pantallas gigantes, es el marco de una experiencia única, de la historia que
+            vas a contar cuando digas que tuviste La Mejor Noche del&nbsp;Mundo.<br />
+            Sí, eso somos.
+        </p>
+        <p class="desktop-p">
+            La Polenta* no es cualquier fiesta.
+            No es una fiesta para todos, es una fiesta para todos los que la quieren pasar bien, bailar, gozar, venir
+            como quieran, cuando quieran.
+            Cada Polenter es un láser en la pista, una ensalada de personas que saben disfrutar.
+            Tampoco somos una fiesta, somos una historia para contar al otro día, una anécdota nueva en tu vida, un
+            mensaje a ese amigo diciéndole que tuviste
+            La Mejor Noche del&nbsp;Mundo.<br />
+            Sí, eso somos.<br />
+            La experiencia Polenta* arranca desde el momento en que entrás hasta el segundo en que te vas.
+            Por eso la puesta de luces, pantallas y visuales, en la fiesta es la gran protagonista.
+            Para cada edición cambiamos como se presenta la fiesta.
+            Shows de lasers, pantallas gigantes, luces leds y visuales originales reciben a la gente al
+            mundo&nbsp;Polenta*.
+        </p>
+        <div class="alarma"><img src="./assets/diseño/icono-alarma.png" alt="imagen alarma" loading="lazy" /></div>
+    </div>
+</div>
+<div class="redes-background">
+    <div class="sifon-box"><img src="./assets/diseño/sifon.png" alt="Imagen Sifón" loading="lazy"></div>
+    <nav class="iconos-box" id="redes">
+        <a href="https://www.instagram.com/polenta.polenta" target="_blank" rel="noopener external">
+            <img src="./assets/redes/instagram-logo.png" alt="Logo Instagram" loading="lazy" />
+        </a>
+        <a href="https://www.youtube.com/@polenta.polenta" target="_blank" rel="noopener external">
+            <img src="./assets/redes/youtube-logo.png" alt="Logo Youtube" loading="lazy" />
+        </a>
+        <a href="https://www.twitch.tv/fiestapolenta" target="_blank" rel="noopener external">
+            <img src="./assets/redes/twitch-logo.png" alt="Logo Twitch" loading="lazy" />
+        </a>
+        <a href="https://spotify.link/ffe57EUw9Ab" target="_blank" rel="noopener external">
+            <img src="./assets/redes/spotify-logo.png" alt="Logo Spotify" loading="lazy" />
+        </a>
+    </nav>
+    <div class="legales">
+        <p>Fiesta Polenta* Marca Registrada</p>
+        <p>Todos los derechos reservados</p>
+    </div>
+
+</div>

@@ -1,0 +1,568 @@
+h1,
+h2{
+    max-width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: black;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: .8rem;
+}
+header{
+    display: flex;
+    max-width: 100%;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 12%;
+    background-color: rgba(237,238,238,255);
+}
+.menu-logo-box,
+.polenta-logo-box{
+    width: 46%;
+}
+.polenta-logo-box a img,
+.menu-logo-box a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.menu-box{
+    display: flex;
+}
+.mat-icon{
+    display: block;
+    height: auto;
+    width: auto;
+    font-size: 35px;
+    cursor: pointer ;
+}
+.menu{
+    display: none;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    background-color: rgba(82,60,242,255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 1s ease, transform 1s ease;
+    z-index: 999;
+}
+.menu.open {
+    display: flex;
+    transform: translateY(0%);
+    opacity: 1;
+}
+.menu.close {
+    display: none;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+.menu-header{
+    display: flex;
+    max-width: 100%;
+    height: 6.5rem;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 0% 0% 1% 10%;
+}
+.menu-body{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+}
+.menu-body nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.menu-list-item {
+    display: block;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    line-height: 3rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: aliceblue;
+}
+.menu-body .info{
+    font-size: 1.4rem;
+}
+.menu-body ol{
+    width: 80%;
+}
+.menu-body li{
+    display: flex;
+    text-align: center;
+    list-style: none;
+    margin: 2% 0;
+}
+.colapse-button-box{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 7%;
+}
+.menu-body button{
+    display: flex;
+    height: auto;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+.menu-icons-box{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    margin: 2.5% 0;
+    gap: 4%;
+}
+.menu-icons{
+    display: flex;
+    align-items: center;
+    background: aliceblue;
+    border: solid 3px aliceblue;
+}
+.ig,
+.yt{
+    border-radius: 12px;
+}
+.spotify{
+    border-radius: 50%;
+}
+.menu-icons.yt img{
+    width: 38px;
+    height: 27px;
+}
+.iconos img{
+    display: block;
+    object-fit: cover;
+    width: 26px;
+    height: 26px;
+}
+.buttons-box{
+    display: none;
+    width: 55%;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10%;
+}
+.header-buttons{
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+}
+main{
+    display: flex;
+    max-width: 100%;
+    background-image: url(../../assets/background-img.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.background-box{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+}
+.hola-polenta-box{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 70%;
+    height: 100vh;
+    min-height: 630px;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+.hola-polenta-box p{
+    order: 1;
+    line-height: 1;
+    font-size: 2.5rem;
+    font-family: 'Pinyon Script';
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+    flex: none;
+}
+.estatua{
+    order: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 75%;
+    height: 50%;
+}
+.estatua img,
+.polenta-main img{
+    display: block;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.polenta-main{
+    order: 2;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    width: 90%;
+    height: 8%;
+}
+.entradas-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    align-items: center;
+    margin-bottom: -6%;
+}
+.entradas-header {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 1.5rem;
+    margin-bottom: 6%;
+    background-color: rgba(48,242,109,255);
+    background-image: url(../../assets/wireframe/wireframe-entradas.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    border-radius: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+    scroll-behavior: smooth;
+    scroll-margin-top: 25vh;
+}
+.entradas-header button{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+.carousel-container{
+    display: flex;
+    max-width: 100%;
+    width: 82%;
+    justify-content: center;
+    align-items: center;
+}
+.carousel {
+    max-width: 100%;
+}
+.slick-dotted.slick-slider{
+    margin-bottom: 0%;
+}
+.slide {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 6px;
+}
+.slide img {
+    width: 100%;
+    object-fit: cover;
+}
+.text-box{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 79.5%;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: antiquewhite;
+    opacity: 0;
+    transition: opacity 0.75s ease;
+}
+.text-box a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.comprar{
+    display: flex;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-family: 'Oswald';
+    font-weight: medium;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: antiquewhite;
+    border: solid;
+    border-width: thin;
+    border-color: antiquewhite;
+    padding: 0 3%;
+}
+.slide:hover .text-box {
+    opacity: 1;
+}
+.scroll-button{
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    z-index: 9999;
+}
+.scroll-button .mat-icon{
+    font-size: 20px;
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 100%;
+}
+.puestas-container{
+    display: flex;
+    color: aliceblue;
+    background-color: rgb(0, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.puestas-text{
+    margin-inline: 10%;
+    text-align: center;
+}
+.puestas-container h1{
+    color: rgba(48,242,109,255);
+    margin: 22% 0 5% 0;
+    font-size: 1.4rem;
+    scroll-margin-top: 7vh;
+}
+.puestas-container p{
+    color: aliceblue;
+    margin-bottom: 6%;
+}
+.puestas-gallery{
+    margin-bottom: -14px;
+
+}
+.imagen-puestas{
+    max-height: 700px;
+}
+.navigation-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navigation-buttons button {
+    border-radius: 100%;
+    border: 0;
+    background-color: rgb(212, 212, 212, 10);
+    margin: 0 10px;
+    cursor: pointer;
+}
+.navigation-buttons .material-icons{
+    display: block;
+    font-size: 1.4rem;
+}
+.navigation-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.momentos-background{
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    background-color: rgba(48,242,109,255);
+    background-image: url(../../assets/background-tile.png);
+    background-repeat: repeat;
+}
+.momentos-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+}
+#momentos-polenta{
+    font-size: 1.4rem;
+    margin: 17% 0 5% 0;
+    text-align: center;
+    scroll-margin-top: 7vh;
+}
+.momentos-box{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    row-gap: 2%;
+    margin: 3%;
+    margin-bottom: -14%;
+}
+.momento{
+    display: flex;
+    max-width: 100%;
+    height: 180px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.remeras,
+.angeles{
+    flex-direction: row-reverse;
+}
+.img-box{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    flex: none;
+}
+.img-box img{
+    display: block;
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    position: relative;
+    top: -20%;
+}
+.remeras img{
+    height: 140%;
+    top: -40%;
+}
+.angeles img{
+    height: 130%;
+    top: -25%;
+}
+.crew img{
+    height: 125%;
+}
+.m-text-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-inline: 3%;
+}
+.m-text-box h2{
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1;
+    margin-top: 2%;
+}
+.m-text-box p{
+    max-width: 100%;
+    font-size: .8rem;
+    line-height: 1.5;
+    white-space: pre-line;
+    text-align: center;
+}
+.info-background{
+    display: flex;
+    background-color: rgba(82,60,242,255);
+}
+.info-box{
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10%;
+    margin-top: 24%;
+}
+.info-header {
+    display: block;
+    height: 5%;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    scroll-behavior: smooth;
+    scroll-margin-top: 2vh;
+}
+.corazon{
+    display: flex;
+    height: 10%;
+}
+.alarma{
+    display: flex;
+    height: 12%;
+}
+.corazon img,
+.alarma img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.info-box p{
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    white-space: pre-line;
+}
+.info-box .movil-p{
+    font-size: .8rem;
+    line-height: 1.5rem;
+}
+.info-box .desktop-p{
+    display: none;
+}
+.redes-background{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-items: center;
+    background-color: rgba(255,255,255,255);
+}
+.sifon-box{
+    display: flex;
+    max-width: 30%;
+    margin: 5% 0;
+}
+.sifon-box img,
+.iconos-box img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.iconos-box{
+    display: flex;
+    width: 55%;
+    align-items: center;
+    gap: 10%;
+}
+.legales{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    text-align: center;
+    line-height: 1.2;
+    margin: 4% 0 6% 0;
+    color: #523cf2;
+}

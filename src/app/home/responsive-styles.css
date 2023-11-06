@@ -1,0 +1,325 @@
+@media only screen and (min-width: 500px) and (max-width: 999px){
+  h1,
+  h2{
+      font-size: 1.7rem;
+      line-height: 1.5rem;
+  }
+  .polenta-logo-box{
+    width: 22%;
+  }
+  .hola-polenta-box p{
+  font-size: 3rem;
+  }
+  .estatua{
+    width: 55%;
+  }
+  .polenta-main{
+    width: 70%;
+  }
+  .entradas-header {
+    height: 3rem;
+    scroll-margin-top: 4rem;
+  }
+  #momentos-polenta{
+    font-size: 1.7rem;
+    scroll-margin-top: 4rem;
+}
+  .momentos-box{
+    margin: 3% 12%;
+  }
+  .info-box{
+    margin: 10%;
+  }
+  .info-header{
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+  
+}
+@media only screen and (min-width: 700px) and (max-width: 999px){
+  .momento{
+    max-width: 600px;
+  }
+  .m-text-box{
+    justify-content: center;
+    gap: 8%;
+  }
+  .m-text-box h1{
+    font-size: 1.2rem;
+  }
+  .m-text-box p{
+    font-size: .9rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  h1,
+  h2{
+      font-size: 2.2rem;
+      line-height: 2rem;
+  }
+  header{
+    height: 5rem;
+    padding-inline: 10%;
+    background-image: url(../../assets/wireframe/wireframe-header.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    }
+    .polenta-logo-box{
+      width: 15%;
+      }
+      .polenta-logo-box a{
+        display: flex;
+      }
+      .polenta-logo-box a img{
+        min-width: 162px;
+        min-height: 37px;
+      }
+      .menu-box{
+      display: none;
+      }
+      .buttons-box{
+      display: flex;
+      width: 70%;
+      gap: 7%;
+    }
+    .header-buttons{
+      flex: none;
+    }
+    .iconos img{
+      width: 35px;
+      height: 35px;
+    }
+    main{
+      height: auto;
+      background-image: none;
+      position: relative;
+    }
+    .background-box{
+      position: absolute;
+      display: flex;
+      max-width: 100%;
+      z-index: -1;
+    }
+    .background-box video{
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .main-container{
+      max-width: 100%;
+    }
+    .hola-polenta-box{
+      flex-direction: row;
+    }
+    .hola-polenta-box p{
+      font-size: 5vw;
+    }
+    .estatua{
+      order: 2;
+      width: 20%;
+    }
+    .polenta-main{
+      order: 3;
+      width: 30%;
+      height: auto;
+    }
+    .entradas-container{
+      max-width: 70%;
+      top: 85%;
+    }
+    .entradas-header {
+      width: 102%;
+      max-width: 102%;
+      height: 3.5rem;
+      margin-bottom: 2%;
+      flex: initial;
+      scroll-margin-top: 4rem;
+    }
+    .carousel-container{
+      display: flex;
+      max-width: 100%;
+      width: 95%;
+      justify-content: center;
+      align-items: center;
+      flex: initial;
+    }
+    .scroll-button{
+      bottom: 40px;
+      right: 35px;
+    }
+    .scroll-button .mat-icon{
+      background-color: rgba(200, 200, 200, 0.6);
+      font-size: 25px;
+    }
+    .momentos-container{
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      align-items: center;
+      margin: 0 auto;
+    }
+    #momentos-polenta{
+      font-size: 2.2rem;
+      margin: 11% 0 0 0;
+      scroll-margin-top: 4rem;
+    }
+    .momentos-box{
+      flex-direction: row;
+      align-items: normal;
+      max-width: 70%;
+      max-height: 100%;
+      justify-content: space-between;
+      margin-inline: 0;
+      margin-bottom: 2%;
+    }
+    .momento{
+      flex-direction: column;
+      flex: none;
+      height: auto;
+      width: 24%;
+      border-radius: 15px;
+    }
+    .remeras,
+    .angeles{
+        flex-direction: column;
+    }
+    .img-box{
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: 66%;
+      flex: none;
+      border-radius: 5px 5px 0 0;
+    }
+    .img-box img{
+      display: block;
+      width: 100%;
+      height: 120%;
+      object-fit: cover;
+      position: relative;
+      top: -20%;
+    }
+    .remeras img{
+      height: 140%;
+      top: -40%;
+    }
+    .angeles img{
+      height: 130%;
+      top: -25%;
+    }
+    .crew img{
+      height: 125%;
+    }
+    .momento h2{
+      width: 100%;
+      height: auto;
+      font-size: 1.5vw;
+      line-height: 1;
+      margin-top: 2%;
+    }
+    .momento p{
+      max-width: 100%;
+      font-size: .85vw;
+      line-height: 2;
+      font-weight: normal;
+    }
+    .crew p{
+      padding-inline: 1%;
+    }
+    .m-text-box{
+      flex: 1;
+      max-width: 100%;
+    }
+    .comprar{
+      font-size: 2rem;
+    }
+    
+    .info-background{
+      padding: 5% 12%;
+      background-image: url(../../assets/wireframe/wireframe-info-left.png), url(../../assets/wireframe/wireframe-info-right.png), url(../../assets/background-tile.png);
+      background-size: 55%, 60%, auto;
+      background-repeat: no-repeat, no-repeat, repeat;
+      background-position: left -520px top 350px, right -600px top 70px, 0;
+    }
+    .info-box{
+      display: flex;
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    .info-header {
+      font-size: 2rem;
+      line-height: 2.2rem;
+      margin: 0 0 1% 0;
+      scroll-margin-top: 4rem;
+    }
+    .info-box .movil-p{
+      display: none;
+    }
+    .info-box .desktop-p{
+      display: block;
+      font-size: 1.1rem;
+      line-height: 2.3rem;
+      margin: 0 20%;
+      white-space: pre-line;
+      word-break: keep-all;
+    }
+    .corazon{
+      margin: 2% 0;
+    }/*cover*/
+    .alarma{
+      margin: 2% 0 0 0; 
+    }
+    .redes-background{
+      background-image: url(../../assets/diseño/lata.png), url(../../assets/diseño/sifon.png);
+      background-repeat: no-repeat, no-repeat;
+      background-position: left center, right center;
+      background-size: contain;
+    }
+    .sifon-box{
+      display: none;
+    }
+    .iconos-box{
+      max-width: 100%;
+      width: auto;
+      justify-content: center;
+      margin-top: 4%;
+    }
+    .iconos-box a{
+      display: block;
+      align-items: center;
+      width: 70%;
+    }
+    .legales{
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      margin: 1% 0 4% 0;
+      gap: 1%;
+    }
+    .legales p{
+      font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1215px){
+  header{
+  padding-inline: 15%;
+  }
+  .redes-background{
+    margin-inline: 14%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .colapse-button-box{
+    margin: 2% 7% 7% 0%;
+  }
+  .menu{
+    width: 50%;
+  }
+}

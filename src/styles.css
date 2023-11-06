@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+html{
+    font-size: 16px;
+}
+body { 
+    display: flex !important;
+    flex-direction: column !important;
+    max-width: 100% !important;
+    min-width: 360px !important;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    caret-color: transparent;
+}
+a{
+    text-decoration: none;
+}
+  
