@@ -128,12 +128,16 @@ export class HomeComponent implements OnInit {
   showPreviousImage() {
     if (this.currentImgIndex > 0) {
       this.currentImgIndex--;
+    } else {
+      this.currentImgIndex = this.puestas.length - 1;
     }
   }
 
   showNextImage() {
     if (this.currentImgIndex < this.puestas.length - 1) {
       this.currentImgIndex++;
+    } else {
+      this.currentImgIndex = 0;
     }
   }
 }

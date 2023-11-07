@@ -161,10 +161,10 @@
         <img class="imagen-puestas" [src]="puestas[currentImgIndex]" alt="Imágen Puestas Polenta*">
     </div>
     <div class="navigation-buttons">
-        <button (click)="showPreviousImage()" [disabled]="currentImgIndex === 0">
+        <button (click)="showPreviousImage()">
             <span class="material-icons">chevron_left</span>
         </button>
-        <button (click)="showNextImage()" [disabled]="currentImgIndex === puestas.length - 1">
+        <button (click)="showNextImage()">
             <span class="material-icons">chevron_right</span>
         </button>
     </div>
