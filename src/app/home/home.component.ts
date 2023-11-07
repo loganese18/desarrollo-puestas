@@ -110,7 +110,7 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  puestas: string[] = [
+  puestas_mobile: string[] = [
     './assets/puestas-mobile/mobile-puesta1.png',
     './assets/puestas-mobile/mobile-puesta2.png',
     './assets/puestas-mobile/mobile-puesta3.png',
@@ -122,22 +122,61 @@ export class HomeComponent implements OnInit {
     './assets/puestas-mobile/mobile-puesta9.png',
     './assets/puestas-mobile/mobile-puesta10.png',
   ];
+  puestas_desktop: string[] = [
+    './assets/puestas-desktop/desktop-puesta1.png',
+    './assets/puestas-desktop/desktop-puesta2.png',
+    './assets/puestas-desktop/desktop-puesta3.png',
+    './assets/puestas-desktop/desktop-puesta4.png',
+    './assets/puestas-desktop/desktop-puesta5.png',
+    './assets/puestas-desktop/desktop-puesta6.png',
+    './assets/puestas-desktop/desktop-puesta7.png',
+  ];
 
   currentImgIndex = 0;
+  isMobileScreen = true;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenWidth();
+  }
+
+  checkScreenWidth() {
+    if (window.innerWidth > 950) {
+      this.isMobileScreen = false;
+    } else {
+      this.isMobileScreen = true;
+    }
+  }
 
   showPreviousImage() {
-    if (this.currentImgIndex > 0) {
-      this.currentImgIndex--;
+    if (this.isMobileScreen) {
+      if (this.currentImgIndex > 0) {
+        this.currentImgIndex--;
+      } else {
+        this.currentImgIndex = this.puestas_mobile.length - 1;
+      }
     } else {
-      this.currentImgIndex = this.puestas.length - 1;
+      if (this.currentImgIndex > 0) {
+        this.currentImgIndex--;
+      } else {
+        this.currentImgIndex = this.puestas_desktop.length - 1;
+      }
     }
   }
 
   showNextImage() {
-    if (this.currentImgIndex < this.puestas.length - 1) {
-      this.currentImgIndex++;
+    if (this.isMobileScreen) {
+      if (this.currentImgIndex < this.puestas_mobile.length - 1) {
+        this.currentImgIndex++;
+      } else {
+        this.currentImgIndex = 0;
+      }
     } else {
-      this.currentImgIndex = 0;
+      if (this.currentImgIndex < this.puestas_desktop.length - 1) {
+        this.currentImgIndex++;
+      } else {
+        this.currentImgIndex = 0;
+      }
     }
   }
 }

@@ -153,6 +153,10 @@
       background-color: rgba(200, 200, 200, 0.6);
       font-size: 25px;
     }
+    .imagen-puestas{
+      max-height: auto;
+      max-width: 99%;
+  }
     .momentos-container{
       display: flex;
       flex-direction: column;
