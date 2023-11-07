@@ -371,7 +371,7 @@ main{
     margin-bottom: -25px;
 }
 .imagen-puestas{
-    max-height: 700px;
+    max-width: 99%;
 }
 .gallery-dots{
     list-style: none;

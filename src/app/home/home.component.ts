@@ -13,7 +13,11 @@ import { SlickCarouselComponent } from 'ngx-slick-carousel';
   styleUrls: ['./home.component.css', './responsive-styles.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor() {
+    window.onload = () => {
+      this.checkScreenWidth();
+    };
+  }
 
   @ViewChild('menu') menuRef!: ElementRef;
   @ViewChild('scroll') scrollRef!: ElementRef;

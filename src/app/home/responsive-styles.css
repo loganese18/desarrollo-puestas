@@ -34,7 +34,6 @@
     font-size: 1.7rem;
     line-height: 2rem;
   }
-  
 }
 @media only screen and (min-width: 700px) and (max-width: 999px){
   .momento{
@@ -67,24 +66,13 @@
     }
     .polenta-logo-box{
       width: 15%;
-      }
-      .polenta-logo-box a{
+    }
+    .polenta-logo-box a{
         display: flex;
-      }
-      .polenta-logo-box a img{
+    }
+    .polenta-logo-box a img{
         min-width: 162px;
         min-height: 37px;
-      }
-      .menu-box{
-      display: none;
-      }
-      .buttons-box{
-      display: flex;
-      width: 70%;
-      gap: 7%;
-    }
-    .header-buttons{
-      flex: none;
     }
     .iconos img{
       width: 35px;
@@ -153,10 +141,6 @@
       background-color: rgba(200, 200, 200, 0.6);
       font-size: 25px;
     }
-    .imagen-puestas{
-      max-height: auto;
-      max-width: 99%;
-  }
     .momentos-container{
       display: flex;
       flex-direction: column;
@@ -309,7 +293,19 @@
       font-size: 1rem;
     }
 }
-
+@media only screen and (min-width: 1100px){
+  .menu-box{
+    display: none;
+    }
+    .buttons-box{
+    display: flex;
+    width: 70%;
+    gap: 7%;
+  }
+  .header-buttons{
+    flex: none;
+  }
+}
 @media only screen and (min-width: 1215px){
   header{
   padding-inline: 15%;
