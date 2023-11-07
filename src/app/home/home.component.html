@@ -160,13 +160,20 @@
     <div class="puestas-gallery">
         <img class="imagen-puestas" [src]="puestas[currentImgIndex]" alt="Imágen Puestas Polenta*">
     </div>
-    <div class="navigation-buttons">
-        <button (click)="showPreviousImage()">
-            <span class="material-icons">chevron_left</span>
-        </button>
-        <button (click)="showNextImage()">
-            <span class="material-icons">chevron_right</span>
-        </button>
+    <div class="navigation-container">
+        <ul class="gallery-dots">
+            <li *ngFor="let image of puestas">
+                <span>.</span>
+            </li>
+        </ul>
+        <div class="navigation-buttons">
+            <button (click)="showPreviousImage()">
+                <span class="material-icons">chevron_left</span>
+            </button>
+            <button (click)="showNextImage()">
+                <span class="material-icons">chevron_right</span>
+            </button>
+        </div>
     </div>
 </div>
 <div class="momentos-background">

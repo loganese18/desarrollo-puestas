@@ -366,16 +366,31 @@ main{
     margin-bottom: 6%;
 }
 .puestas-gallery{
-    margin-bottom: -14px;
+    margin-bottom: -25px;
 
 }
 .imagen-puestas{
     max-height: 700px;
 }
+.gallery-dots{
+    list-style: none;
+    display: flex;
+    font-size: 2rem;
+    line-height: 0.2;
+    opacity: 25%;
+}
+.gallery-dots li{
+    margin: 10px;
+}
+.navigation-container{
+    position: relative;
+    bottom: -20px;
+}
 .navigation-buttons {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5px;
 }
 .navigation-buttons button {
     border-radius: 100%;
