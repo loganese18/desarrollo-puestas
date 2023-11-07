@@ -377,10 +377,13 @@ main{
     display: flex;
     font-size: 2rem;
     line-height: 0.2;
-    opacity: 25%;
+}
+.gallery-dots li.active-dot{
+    opacity: 80%;
 }
 .gallery-dots li{
     margin: 10px;
+    opacity: 25%;
 }
 .navigation-container{
     position: relative;
@@ -390,7 +393,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5px;
+    margin: 10px 3px 0 3px;
 }
 .navigation-buttons button {
     border-radius: 100%;

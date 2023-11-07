@@ -162,7 +162,7 @@
     </div>
     <div class="navigation-container">
         <ul class="gallery-dots">
-            <li *ngFor="let image of puestas">
+            <li *ngFor="let image of puestas; let i = index" [ngClass]="{'active-dot': i === currentImgIndex}">
                 <span>.</span>
             </li>
         </ul>
