@@ -376,8 +376,9 @@ main{
 .gallery-dots{
     list-style: none;
     display: flex;
+    align-items: center;
     font-size: 2rem;
-    line-height: 0.2;
+    line-height: 0.1;
 }
 .gallery-dots li.active-dot{
     opacity: 80%;

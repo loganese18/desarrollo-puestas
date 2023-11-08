@@ -141,6 +141,22 @@
       background-color: rgba(200, 200, 200, 0.6);
       font-size: 25px;
     }
+    .puestas-text h1{
+      font-size: 2.2rem;
+    }
+    .puestas-text p{
+      font-size: .9rem;
+    }
+    .gallery-dots{
+      font-size: 3rem;
+      margin-bottom: 14px;
+    }
+    .gallery-dots li{
+      margin: 10px 20px;
+    }
+    .navigation-buttons{
+      margin: 0px 3px -5px 3px;
+    }
     .momentos-container{
       display: flex;
       flex-direction: column;
@@ -150,7 +166,7 @@
     }
     #momentos-polenta{
       font-size: 2.2rem;
-      margin: 11% 0 0 0;
+      margin: 5% 0 0 0;
       scroll-margin-top: 4rem;
     }
     .momentos-box{
