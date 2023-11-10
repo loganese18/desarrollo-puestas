@@ -160,26 +160,15 @@
             al
             mundo&nbsp;Polenta*.</p>
     </div>
-    <div class="puestas-gallery">
-        <img class="imagen-puestas"
-            [src]="isMobileScreen ? puestas_mobile[currentImgIndex] : puestas_desktop[currentImgIndex]"
-            alt="Imágen Puestas Polenta*">
-    </div>
-    <div class="navigation-container">
-        <ul class="gallery-dots">
-            <li *ngFor="let image of (isMobileScreen ? puestas_mobile : puestas_desktop); let i = index"
-                [ngClass]="{'active-dot': i === currentImgIndex}">
-                <span>.</span>
-            </li>
-        </ul>
-        <div class="navigation-buttons">
-            <button (click)="showPreviousImage()">
-                <span class="material-icons">chevron_left</span>
-            </button>
-            <button (click)="showNextImage()">
-                <span class="material-icons">chevron_right</span>
-            </button>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let image of (isMobileScreen ? puestas_mobile : puestas_desktop)">
+                <img class="imagen-puestas" [src]="image" alt="Imágen Puestas Polenta*">
+            </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 </div>
 <div class="momentos-background">

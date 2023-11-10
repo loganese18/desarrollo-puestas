@@ -1,18 +1,20 @@
 import {
+  AfterViewInit,
   Component,
   ElementRef,
   HostListener,
-  OnInit,
   ViewChild,
 } from '@angular/core';
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css', './responsive-styles.css'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements AfterViewInit {
   constructor() {
     window.onload = () => {
       this.checkScreenWidth();
@@ -23,8 +25,24 @@ export class HomeComponent implements OnInit {
   @ViewChild('scroll') scrollRef!: ElementRef;
   @ViewChild('slickModal') slickModal!: SlickCarouselComponent;
 
-  ngOnInit(): void {
-    this.slickModal.initSlick();
+  ngAfterViewInit(): void {
+    const swiper = new Swiper('.swiper', {
+      autoplay: false,
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 40,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      modules: [Navigation, Pagination],
+    });
+    console.log('Inicialización de Swiper');
   }
 
   slideConfig = {
