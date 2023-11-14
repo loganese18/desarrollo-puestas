@@ -382,6 +382,9 @@ main{
 .swiper-slide{
     max-width: 100%;
 }
+.swiper-pagination{
+    display: flex;
+}
 .imagen-puestas{
     max-width: 100%;
     width: 100%;
