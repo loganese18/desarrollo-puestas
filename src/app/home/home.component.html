@@ -163,7 +163,8 @@
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide" *ngFor="let image of (isMobileScreen ? puestas_mobile : puestas_desktop)">
-                <img class="imagen-puestas" [src]="image" alt="Imágen Puestas Polenta*">
+                <img class="imagen-puestas" [src]="image" alt="Imágen Puestas Polenta*" loading="lazy">
+                <div class="swiper-lazy-preloader"></div>
             </div>
         </div>
         <div class="swiper-pagination"></div>
