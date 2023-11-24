@@ -147,15 +147,8 @@
     .puestas-text p{
       font-size: .9rem;
     }
-    .gallery-dots{
-      font-size: 3rem;
-      margin-bottom: 14px;
-    }
-    .gallery-dots li{
-      margin: 10px 20px;
-    }
-    .navigation-buttons{
-      margin: 0px 3px -5px 3px;
+    .swiper-button-next, .swiper-button-prev{
+      display: flex;
     }
     .momentos-container{
       display: flex;

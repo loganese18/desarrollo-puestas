@@ -377,6 +377,14 @@ main{
 .swiper-slide{
     max-width: 100%;
 }
+.imagen-puestas{
+    max-width: 100%;
+    width: 100%;
+}
+.swiper-button-next, .swiper-button-prev{
+    display: none;
+    color: aliceblue !important;
+}
 .momentos-background{
     display: flex;
     justify-content: center;
