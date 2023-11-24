@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 10,
+      lazyPreloadPrevNext: 1,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
