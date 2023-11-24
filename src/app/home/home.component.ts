@@ -1,8 +1,8 @@
 import {
-  AfterViewInit,
   Component,
   ElementRef,
   HostListener,
+  OnInit,
   ViewChild,
 } from '@angular/core';
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
@@ -14,7 +14,7 @@ import { Navigation, Pagination } from 'swiper/modules';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css', './responsive-styles.css'],
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit {
   constructor() {
     window.onload = () => {
       this.checkScreenWidth();
@@ -25,20 +25,20 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('scroll') scrollRef!: ElementRef;
   @ViewChild('slickModal') slickModal!: SlickCarouselComponent;
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     const swiper = new Swiper('.swiper', {
       autoplay: false,
       centeredSlides: true,
-      loop: true,
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: 40,
+      spaceBetween: 10,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
       pagination: {
         el: '.swiper-pagination',
+        clickable: true, // Permite hacer clic en los puntos para navegar a la diapositiva correspondiente
       },
       modules: [Navigation, Pagination],
     });
@@ -143,6 +143,8 @@ export class HomeComponent implements AfterViewInit {
     './assets/puestas-mobile/mobile-puesta8.png',
     './assets/puestas-mobile/mobile-puesta9.png',
     './assets/puestas-mobile/mobile-puesta10.png',
+    './assets/puestas-mobile/mobile-puesta11.png',
+    './assets/puestas-mobile/mobile-puesta12.png',
   ];
   puestas_desktop: string[] = [
     './assets/puestas-desktop/desktop-puesta1.png',
@@ -152,6 +154,7 @@ export class HomeComponent implements AfterViewInit {
     './assets/puestas-desktop/desktop-puesta5.png',
     './assets/puestas-desktop/desktop-puesta6.png',
     './assets/puestas-desktop/desktop-puesta7.png',
+    './assets/puestas-desktop/desktop-puesta8.png',
   ];
 
   currentImgIndex = 0;
