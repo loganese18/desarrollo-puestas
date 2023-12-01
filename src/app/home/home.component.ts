@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 10,
-      lazyPreloadPrevNext: 1,
+      lazyPreloadPrevNext: 2,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -156,6 +156,7 @@ export class HomeComponent implements OnInit {
     './assets/puestas-desktop/desktop-puesta6.png',
     './assets/puestas-desktop/desktop-puesta7.png',
     './assets/puestas-desktop/desktop-puesta8.png',
+    './assets/puestas-desktop/desktop-puesta9.png',
   ];
 
   currentImgIndex = 0;
